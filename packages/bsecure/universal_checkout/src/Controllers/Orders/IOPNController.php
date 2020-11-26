@@ -34,7 +34,7 @@ class IOPNController extends Controller
 
             $order_ref = $requestData['order_ref'];
 
-            $orderResponse = Order::getOrderStatus($requestData);
+            $orderResponse = Order::getOrderStatus($order_ref);
 
             if($orderResponse['error'])
             {
