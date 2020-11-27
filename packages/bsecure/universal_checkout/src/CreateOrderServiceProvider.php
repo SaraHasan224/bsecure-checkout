@@ -13,9 +13,10 @@ class CreateOrderServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('bSecure\UniveralCheckout\Controllers\Orders\CreateOrderController');
-        $this->app->make('bSecure\UniveralCheckout\Controllers\Orders\IOPNController');
-        $this->app->make('bSecure\UniveralCheckout\Controllers\Orders\OrderStatusUpdateController');
+        $this->app->bind("bSecure_facade", function(){
+            return new BsecureCheckout();
+        });
+
     }
 
     /**
@@ -25,7 +26,6 @@ class CreateOrderServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadTranslationsFrom( resource_path('lang/vendor/bSecure'),'bSecure');
 
 

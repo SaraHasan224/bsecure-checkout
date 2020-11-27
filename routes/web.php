@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use bSecure\LaravelSDK\bSecure;
 
 
 /*
@@ -15,18 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-//Route::get('/demo/{name}', function($sName) {
-//    $oGreetr = new bSecure();
-//    return $oGreetr->home($sName);
+//Route::get('/', function () {
+//    return view('welcome');
 //});
 
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('cart','HomeController@cart');
-//Route::post('create-order','HomeController@createOrder');

@@ -21,6 +21,15 @@ return [
       'invalid' => 'Invalid environment or secret keys provided',
     ]
   ],
+  'validation' => [
+    'order_ref' => [
+      'required' =>  'Order reference field is required',
+    ],
+    'order_status' => [
+      'required' =>  'Order status field is required',
+      'not_matched' =>  'Order status does not match with bSecure order statuses.',
+    ],
+  ],
   'order' => [
     'success' => 'Order placed successfully',
     'failure' => 'Unable to place order. Try again later',

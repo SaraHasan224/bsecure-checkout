@@ -20,7 +20,11 @@
             "providers": [
                 "bSecure\\UniveralCheckout\\CreateOrderServiceProvider",
                 "bSecure\\UniveralCheckout\\SSOServiceProvider",
-            ]
+            ],
+            "aliases": {
+                "BsecureCheckout": "bSecure\\UniveralCheckout\\BsecureCheckout",
+                "BsecureSSO": "bSecure\\UniveralCheckout\\BsecureSSO",
+            }
         }
     },
     "require": {}

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use bSecure\UniveralCheckout\Controllers\Orders\CreateOrderController;
+//use bSecure\UniveralCheckout\Controllers\Orders\CreateOrderController;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -35,7 +35,8 @@ class HomeController extends Controller
     public function createOrder(Request $request)
     {
         $requestData = $request->all();
-        $order = new CreateOrderController();
-        return $order->create($requestData);
+//        $order = new CreateOrderController();
+//        return $order->create($requestData);
+        return $requestData;
     }
 }

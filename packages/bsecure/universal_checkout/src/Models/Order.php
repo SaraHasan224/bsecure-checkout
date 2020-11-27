@@ -24,13 +24,6 @@ class Order extends Model
         'products.*.description'       => 'nullable|string',
         'products.*.short_description' => 'nullable|string|max:1000',
       ],
-      'order-status' => [
-        'order_ref'                     => 'required',
-      ],
-      'manual-order-status-update' => [
-        'order_ref'                     => 'required',
-        'status'                     => 'required|integer',
-      ]
     ];
 
 

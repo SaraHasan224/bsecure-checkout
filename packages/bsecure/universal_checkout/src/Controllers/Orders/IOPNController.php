@@ -23,16 +23,16 @@ class IOPNController extends Controller
      * Author: Sara Hasan
      * Date: 26-November-2020
      */
-    public function orderStatus($requestData)
+    public function orderStatus($order_ref)
     {
         try {
-            $validator = Validator::make($requestData, Order::$validationRules['order-status']);
 
-            if ($validator->fails()) {
-                return ApiResponseHandler::validationError($validator->errors());
+            $validationErrors = $this->_checkForValidationRule( $order_ref );
+
+            if( count( $validationErrors ) > 0 )
+            {
+                return ApiResponseHandler::validationError( $validationErrors );
             }
-
-            $order_ref = $requestData['order_ref'];
 
             $orderResponse = Order::getOrderStatus($order_ref);
 
@@ -49,4 +49,16 @@ class IOPNController extends Controller
         }
     }
 
+    private function _checkForValidationRule($order_ref )
+    {
+        $errors = [];
+
+
+        if( empty($order_ref) )
+        {
+            $errors[] = trans('bSecure::messages.validation.order_ref.required');
+        }
+
+        return $errors;
+    }
 }

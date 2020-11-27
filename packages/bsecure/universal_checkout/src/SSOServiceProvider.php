@@ -13,8 +13,9 @@ class SSOServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('bSecure\UniveralCheckout\Controllers\SSO\VerifyClientController');
-        $this->app->make('bSecure\UniveralCheckout\Controllers\SSO\CustomerVerification');
+        $this->app->bind("sso_facade", function(){
+            return new BsecureSSO();
+        });
     }
 
     /**
@@ -24,7 +25,6 @@ class SSOServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadTranslationsFrom( resource_path('lang/vendor/bSecure'),'bSecure');
 
 
