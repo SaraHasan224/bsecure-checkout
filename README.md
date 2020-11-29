@@ -9,6 +9,7 @@
 [![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
 [![Version](https://poser.pugx.org/bsecure/universal-checkout/version)](//packagist.org/packages/bsecure/universal-checkout)
 
+
 bSecure Checkout 
 =========================
  Pakistan's first universal checkout solution for ecommerce stores built on woocommerce, magento, shopify and more
@@ -236,7 +237,7 @@ array (
 )
 ```
 
-###Get Customer Information
+### Get Customer Information
 After successful login to sso app below method will let you get customer profile.
 
 ```
