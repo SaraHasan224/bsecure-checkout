@@ -2,6 +2,7 @@
   <img src="https://bsecure-dev.s3-eu-west-1.amazonaws.com/dev/react_app/assets/secure_logo.png" width="400px" position="center">
 </p>
 
+
 [![Latest Stable Version](https://poser.pugx.org/bsecure/universal-checkout/v)](//packagist.org/packages/bsecure/universal-checkout) 
 [![Total Downloads](https://poser.pugx.org/bsecure/universal-checkout/downloads)](//packagist.org/packages/bsecure/universal-checkout) 
 [![Latest Unstable Version](https://poser.pugx.org/bsecure/universal-checkout/v/unstable)](//packagist.org/packages/bsecure/universal-checkout) 
@@ -157,7 +158,9 @@ return [
   'environment' => env('BSECURE_ENVIRONMENT'),
 ];
 ```
-###Routing
+
+### Routing
+
 Next, you are ready to authenticate users! You will need two routes: one for redirecting the user to the OAuth provider, and another for receiving the customer profile from the provider after authentication. We will access BsecureSSO using the BsecureSSO Facade:
 
 You will need to define routes to your controller methods
@@ -168,7 +171,8 @@ Route::post('/sso-sdk-login', 'TestController@ssoSDKLogin');
 Route::post('/sso-verify-customer', 'TestController@verifyCustomer');
 ```
 
-###Authenticate Client
+### Authenticate Client
+Client Authentication is of two type sdk and web client validation.
 
 ```
 <?php
@@ -231,7 +235,9 @@ array (
   "store_url": "builder-store-url"
 )
 ```
+
 ###Get Customer Information
+After successful login to sso app below method will let you get customer profile.
 
 ```
 
@@ -251,11 +257,13 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
      
-    public function handleProviderCallback(Request $request)
+    public function verifyCustomer(Request $request)
     {
         $requestData = $request->all();
+        $auth_code = $requestData['code'];
+
         $client = new BsecureSSO();
-        return $client->customerProfile($requestData);
+        return $client->customerProfile($auth_code);
     }
 }
 
