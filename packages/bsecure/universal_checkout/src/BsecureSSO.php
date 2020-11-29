@@ -5,18 +5,34 @@ namespace bSecure\UniveralCheckout;
 use bSecure\UniveralCheckout\Controllers\SSO\CustomerVerification;
 use bSecure\UniveralCheckout\Controllers\SSO\VerifyClientController;
 
+use bSecure\UniveralCheckout\Helpers\Constant;
 use Illuminate\Support\Facades\Facade;
 
 class BsecureSSO extends Facade
 {
     /*
-     *  CLIENT VERIFICATION : SSO Verify Client
+     *  CLIENT VERIFICATION : SSO Verify Client for web
     */
-    public function authenticateClient($requestData)
+    public function authenticateWebClient($state = null)
     {
         try {
             $client = new VerifyClientController();
-            return $client->verifyClient($requestData);
+            return $client->verifyClient($state,Constant::APP_TYPE['checkout']);
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+
+    /*
+     *  CLIENT VERIFICATION : SSO Verify Client for sdk
+    */
+    public function authenticateSDKClient($state = null)
+    {
+        try {
+            $client = new VerifyClientController();
+            return $client->verifyClient($state,Constant::APP_TYPE['sdk']);
             //code...
         } catch (\Throwable $th) {
             throw $th;
@@ -27,11 +43,11 @@ class BsecureSSO extends Facade
      *  Customer Verification : Get Customer Profile
     */
 
-    public function customerProfile($requestData)
+    public function customerProfile($auth_code = null)
     {
         try {
             $customer = new CustomerVerification();
-            return $customer->verifyCustomer($requestData);
+            return $customer->verifyCustomer($auth_code);
             //code...
         } catch (\Throwable $th) {
             throw $th;

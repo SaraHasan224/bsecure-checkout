@@ -10,8 +10,14 @@ class Order extends Model
 {
     public static $validationRules = [
       'createOrder' => [
-
         'order_id'                     => 'required',
+
+        'customer'                     => 'required',
+        'customer.name'         => 'nullable|string|max:191',
+        'customer.country_code' => 'nullable|string|min:2|max:3',
+        'customer.phone_number' => 'nullable|string|min:10|max:10',
+        'customer.email'        => 'nullable|email',
+        'customer.auth_code'    => 'nullable|string',
 
         'products'                     => 'required',
         'products.*.id'                => 'required|string|min:1|max:100|not_in:0',

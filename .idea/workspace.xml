@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09896850-6014-4593-8437-bdb47c9790f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureCheckout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/routes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Customer.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/lang/vendor/bSecure/en/messages.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bSecure.php" afterPath="$PROJECT_DIR$/config/bSecure.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/composer.json" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/CreateOrderServiceProvider.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/CreateOrderServiceProvider.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/SSOServiceProvider.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/SSOServiceProvider.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,38 +25,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="2822">
+                <caret line="226" column="4" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="39" />
+            <state relative-caret-position="374">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="166">
-                <caret line="263" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="TestController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+              <folding>
+                <element signature="e#40#85#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5219">
-                <caret line="307" column="0" lean-forward="true" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="BsecureSSO.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerifyClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1877">
+              <caret line="157" column="27" lean-forward="false" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,17 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>customerProfile</find>
-      <find>getCustomerProfile</find>
-      <find>createMerchantOrder</find>
-      <find>Helper</find>
-      <find>ApiResponseHandler</find>
-      <find>ClientApp</find>
-      <find>bSecure\LaravelSDK</find>
-      <find>SDK</find>
-      <find>bSecure\LaravelSDK\CreateOrderServiceProvider</find>
-      <find>b</find>
-      <find>LaravelSDK</find>
       <find>Unable to update order status</find>
       <find>getOrderStatus</find>
       <find>Helper::apiRequest</find>
@@ -104,26 +114,31 @@
       <find>bSecure\UniveralCheckout\</find>
       <find>bSecure\\UniveralCheckout\\</find>
       <find>bSecure\UniveralCheckout</find>
-      <find>order-status</find>
       <find>CreateOrderController</find>
       <find>IOPNController</find>
       <find>orderStatus</find>
       <find>orderUpdates</find>
+      <find>_checkForValidationRule</find>
+      <find>_createAuthenticationURL</find>
+      <find>customerProfile</find>
+      <find>authenticateSDKClient</find>
+      <find>ssoSDKLogin(</find>
+      <find>orderStatus(</find>
+      <find>manualOrderStatusUpdate</find>
+      <find>order-status</find>
+      <find>verifyCustomer</find>
       <find>updateManualOrderStatus</find>
+      <find>createOrder</find>
+      <find>authenticateClient</find>
+      <find>ssoSDKLogin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/Controllers/SSO/VerifyClientController.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/Helpers/Helper.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/Models/Order.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/Models/ClientApp.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/Models/Merchant.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/laravel_sdk/src/vendor/bSecure/en/messages.php" />
@@ -153,7 +168,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/composer.json" />
-        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/SSOServiceProvider.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/CreateOrderServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
@@ -162,16 +176,20 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/config/bSecure.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureCheckout.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/bSecure/en/messages.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php" />
-        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" />
+        <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" />
       </list>
     </option>
   </component>
@@ -188,8 +206,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="238" />
-    <option name="y" value="26" />
+    <option name="x" value="145" />
     <option name="width" value="1080" />
     <option name="height" value="735" />
   </component>
@@ -219,7 +236,20 @@
             <path>
               <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
@@ -238,6 +268,71 @@
               <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Orders" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="SSO" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="lang" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="package_manager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="packages" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bsecure" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="universal_checkout" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="package_manager" type="b2602c69:ProjectViewProjectNode" />
@@ -266,7 +361,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="SearchEverywhereHistoryKey" value="api.p&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/routes/api.php&#10;mess&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/packages/bsecure/universal_checkout/src/lang/en/messages.php&#10;consta&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/packages/bsecure/universal_checkout/src/Helpers/Constant.php&#10;app&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;createOrder&#9;null&#9;null&#10;app.&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;HomeController&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/app/Http/Controllers/HomeController.php&#10;ap&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/routes/api.php&#10;app.p&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;.env&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/.env&#10;ProviderRepository.php&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php&#10;messages&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/resources/lang/en/messages.php&#10;SSOServiceProvider&#9;null&#9;null&#10;bSecure.php&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/bSecure.php&#10;CreateOrderController&#9;null&#9;null&#10;config/app.&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/routes/api.php&#10;api.p&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/routes/api.php&#10;mess&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/packages/bsecure/universal_checkout/src/lang/en/messages.php&#10;consta&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/packages/bsecure/universal_checkout/src/Helpers/Constant.php&#10;app&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;createOrder&#9;null&#9;null&#10;app.&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;HomeController&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/app/Http/Controllers/HomeController.php&#10;ap&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/routes/api.php&#10;app.p&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php&#10;.env&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/.env&#10;ProviderRepository.php&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php&#10;messages&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/resources/lang/en/messages.php&#10;SSOServiceProvider&#9;null&#9;null&#10;bSecure.php&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/bSecure.php&#10;CreateOrderController&#9;null&#9;null&#10;config/app.&#9;FILE&#9;file://D:/xampp/htdocs/laravel-package/package_manager/config/app.php" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -310,12 +405,13 @@
       <workItem from="1606214117219" duration="3392000" />
       <workItem from="1606278824957" duration="1259000" />
       <workItem from="1606366676543" duration="17852000" />
-      <workItem from="1606449332726" duration="10505000" />
+      <workItem from="1606449332726" duration="14709000" />
+      <workItem from="1606477061022" duration="4499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56246000" />
+    <option name="totallyTimeSpent" value="64949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -323,13 +419,12 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25988287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1317716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -339,9 +434,32 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25988287" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -367,7 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="132" column="23" lean-forward="false" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -375,7 +492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="145" column="20" lean-forward="false" selection-start-line="145" selection-start-column="20" selection-end-line="145" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -398,7 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -417,21 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Customer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1989">
@@ -443,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -458,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -466,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -474,15 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-18">
           <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -513,7 +601,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
           <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -521,7 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="45" column="51" lean-forward="true" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,57 +619,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="5" lean-forward="false" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#53#98#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#63#99#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/routes.php" />
     <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="68" lean-forward="false" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding>
-            <element signature="e#44#110#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,7 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-454">
           <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="4497" column="17" lean-forward="true" selection-start-line="4497" selection-start-column="17" selection-end-line="4497" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -647,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,23 +700,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="231" column="76" lean-forward="true" selection-start-line="231" selection-start-column="8" selection-end-line="231" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,74 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="58" column="81" lean-forward="false" selection-start-line="58" selection-start-column="81" selection-end-line="58" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/vendor/bSecure/en/messages.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="37" column="60" lean-forward="false" selection-start-line="37" selection-start-column="60" selection-end-line="37" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureCheckout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
-          <folding>
-            <element signature="e#44#114#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="62" column="20" lean-forward="false" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
-          <folding>
-            <element signature="e#63#99#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="166">
-            <caret line="263" column="40" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -767,6 +723,136 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="5219">
             <caret line="307" column="0" lean-forward="true" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Customer.php" />
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="62" column="37" lean-forward="false" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="54" column="21" lean-forward="false" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+          <folding>
+            <element signature="e#60#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureCheckout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="883">
+          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#1671#2712#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="e#40#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1877">
+          <caret line="157" column="27" lean-forward="false" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="41" column="23" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="34" column="39" lean-forward="false" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2822">
+            <caret line="226" column="4" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />

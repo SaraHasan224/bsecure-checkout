@@ -21,5 +21,6 @@ Route::post('/create-order', 'TestController@createOrder');
 Route::post('/manual-order-status-update', 'TestController@manualOrderStatusUpdate');
 Route::post('/order-status', 'TestController@orderStatus');
 
-Route::post('/sso-login', 'TestController@ssoLogin');
+Route::post('/sso-web-login', 'TestController@ssoWebLogin');
+Route::post('/sso-sdk-login', 'TestController@ssoSDKLogin');
 Route::post('/sso-verify-customer', 'TestController@verifyCustomer');

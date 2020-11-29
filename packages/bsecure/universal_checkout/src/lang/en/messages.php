@@ -23,11 +23,17 @@ return [
   ],
   'validation' => [
     'order_ref' => [
-      'required' =>  'Order reference field is required',
+      'required' => 'Order reference field is required',
+    ],
+    'auth_code' => [
+      'required' => 'Auth code field is required',
+    ],
+    'state' => [
+      'required' => 'State field is required',
     ],
     'order_status' => [
-      'required' =>  'Order status field is required',
-      'not_matched' =>  'Order status does not match with bSecure order statuses.',
+      'required' => 'Order status field is required',
+      'not_matched' => 'Order status does not match with bSecure order statuses.',
     ],
   ],
   'order' => [

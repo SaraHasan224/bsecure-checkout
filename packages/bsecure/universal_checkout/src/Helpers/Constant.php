@@ -15,6 +15,8 @@ class Constant
 
     const AUTH_SERVER_URL = 'https://api-dev.bsecure.app/';
 
+    const LOGIN_REDIRECT_URL = 'https://login-dev.bsecure.app/auth/sso';
+
     const API_VERSION = 'v1';
 
     const API_ENDPOINTS = [
@@ -26,6 +28,10 @@ class Constant
       'customer_profile' => Constant::API_VERSION . '/sso/customer/profile',
     ];
 
+    const APP_TYPE = [
+      'checkout' => 1,
+      'sdk' => 2,
+    ];
 
     const OrderStatus = [
       'created'       => 1,

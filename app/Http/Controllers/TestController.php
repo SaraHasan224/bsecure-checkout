@@ -42,18 +42,33 @@ class TestController extends Controller
     /*
      *  SSO
     */
-    public function ssoLogin(Request $request)
+    public function ssoWebLogin(Request $request)
     {
         $requestData = $request->all();
+        $state = $requestData['state'];
+
         $client = new BsecureSSO();
-        return $client->authenticateClient($requestData);
+        return $client->authenticateWebClient($state);
+    }
+
+
+    public function ssoSDKLogin(Request $request)
+    {
+        $requestData = $request->all();
+
+        $state = $requestData['state'];
+
+        $client = new BsecureSSO();
+        return $client->authenticateSDKClient($state);
     }
 
     public function verifyCustomer(Request $request)
     {
         $requestData = $request->all();
+        $auth_code = $requestData['code'];
+
         $client = new BsecureSSO();
-        return $client->customerProfile($requestData);
+        return $client->customerProfile($auth_code);
     }
 
 }

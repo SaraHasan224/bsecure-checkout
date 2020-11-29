@@ -94,13 +94,35 @@ class CreateOrderController extends Controller
         $orderData['sub_total_amount'] = $sub_total_amount;
         $orderData['discount_amount'] = $total_discount;
         $orderData['total_amount'] = $order_grand_total;
-        $orderData['customer'] = [
-          "country_code" => '',
-          "phone_number" => '',
-          "name" => '',
-          "email" => ''
-        ];
+
+        //Customer
+
+        $orderData['customer'] = $this->createCustomerDataStructure($requestData);
 
         return $orderData;
+    }
+
+    private function createCustomerDataStructure($requestData)
+    {
+        $customerData = $requestData['customer'];
+
+        $auth_code = array_key_exists('auth_code',$customerData) ? $customerData['auth_code'] : '' ;
+
+        if( !empty( $auth_code ) )
+        {
+            $customer = [
+              "auth_code" => $auth_code,
+            ];;
+        }
+        else{
+            $customer = [
+              "country_code" => array_key_exists('country_code',$customerData) ? $customerData['country_code'] : '',
+              "phone_number" => array_key_exists('phone_number',$customerData) ? $customerData['phone_number'] : '',
+              "name" => array_key_exists('name',$customerData) ? $customerData['name'] : '',
+              "email" => array_key_exists('email',$customerData) ? $customerData['email'] : '',
+            ];
+        }
+
+        return $customer;
     }
 }
