@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09896850-6014-4593-8437-bdb47c9790f5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Customer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/lang/vendor/bSecure/en/messages.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/BsecureSSO.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/CreateOrderController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" afterPath="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +19,21 @@
         <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2822">
-                <caret line="226" column="4" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
+              <first_editor relative-caret-position="34">
+                <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -101,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Unable to update order status</find>
       <find>getOrderStatus</find>
       <find>Helper::apiRequest</find>
       <find>Merchant</find>
@@ -131,6 +133,7 @@
       <find>createOrder</find>
       <find>authenticateClient</find>
       <find>ssoSDKLogin</find>
+      <find>Update Manual Order Status</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +182,6 @@
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/IOPNController.php" />
         <option value="$PROJECT_DIR$/resources/lang/vendor/bSecure/en/messages.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/Orders/OrderStatusUpdateController.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Helpers/Constant.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/CustomerVerification.php" />
@@ -189,6 +191,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Controllers/SSO/VerifyClientController.php" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md" />
       </list>
     </option>
@@ -205,8 +208,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="238" />
+    <option name="y" value="26" />
     <option name="width" value="1080" />
     <option name="height" value="735" />
   </component>
@@ -406,15 +410,15 @@
       <workItem from="1606278824957" duration="1259000" />
       <workItem from="1606366676543" duration="17852000" />
       <workItem from="1606449332726" duration="14709000" />
-      <workItem from="1606477061022" duration="4499000" />
+      <workItem from="1606477061022" duration="4706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64949000" />
+    <option name="totallyTimeSpent" value="65156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="238" y="26" width="1080" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -424,7 +428,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1317716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16917293" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -718,17 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5219">
-            <caret line="307" column="0" lean-forward="true" selection-start-line="307" selection-start-column="0" selection-end-line="307" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/Models/Customer.php" />
     <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/src/lang/en/messages.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -848,11 +841,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/bsecure/universal_checkout/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2822">
-            <caret line="226" column="4" lean-forward="false" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
+          <first_editor relative-caret-position="34">
+            <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />

@@ -1,8 +1,13 @@
 <p align="center">
   <img src="https://bsecure-dev.s3-eu-west-1.amazonaws.com/dev/react_app/assets/secure_logo.png" width="400px" position="center">
 </p>
-[![Latest Stable Version](https://poser.pugx.org/bsecure/universal-checkout/v)](//packagist.org/packages/bsecure/universal-checkout) [![Total Downloads](https://poser.pugx.org/bsecure/universal-checkout/downloads)](//packagist.org/packages/bsecure/universal-checkout) [![Latest Unstable Version](https://poser.pugx.org/bsecure/universal-checkout/v/unstable)](//packagist.org/packages/bsecure/universal-checkout) [![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
 
+
+[![Latest Stable Version](https://poser.pugx.org/bsecure/universal-checkout/v)](//packagist.org/packages/bsecure/universal-checkout) 
+[![Total Downloads](https://poser.pugx.org/bsecure/universal-checkout/downloads)](//packagist.org/packages/bsecure/universal-checkout) 
+[![Latest Unstable Version](https://poser.pugx.org/bsecure/universal-checkout/v/unstable)](//packagist.org/packages/bsecure/universal-checkout) 
+[![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
+[![Version](https://poser.pugx.org/bsecure/universal-checkout/version)](//packagist.org/packages/bsecure/universal-checkout)
 
 bSecure Checkout 
 =========================
@@ -33,7 +38,7 @@ Add alias
   
    ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\SSOServiceProvider"``
 
-It will create a vendor/bSecure folder inside resource/lang folder. If you want to customize the error messages your can overwrite the file.
+It will create a vendor/bSecure folder inside resources/lang folder. If you want to customize the error messages your can overwrite the file.
 
 ### Publish the configuration file
   ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\CreateOrderServiceProvider" --tag="config""``
@@ -69,21 +74,29 @@ Your orderPayload will contain order_id and cart items.
 ```
 array (
   'order_id' => 'your-order-id',
+  'customer' => 
+      array (
+        'auth_code' => 'string',
+        'name' => 'string',
+        'email' => 'string',
+        'country_code' => 'string',
+        'phone_number' => 'string',
+      ),
   'products' => 
-  array (
-    0 => 
-    array (
-      'id' => 'product-id',
-      'name' => 'product-name',
-      'sku' => 'product-sku',
-      'quantity' => 0,
-      'price' => 0,
-      'sale_price' => 0,
-      'image' => 'product-image',
-      'description' => 'product-description',
-      'short_description' => 'product-short-description',
-    ),
-  ),
+      array (
+        0 => 
+            array (
+              'id' => 'product-id',
+              'name' => 'product-name',
+              'sku' => 'product-sku',
+              'quantity' => 0,
+              'price' => 0,
+              'sale_price' => 0,
+              'image' => 'product-image',
+              'description' => 'product-description',
+              'short_description' => 'product-short-description',
+            ),
+      ),
 )
 ```
 
@@ -121,70 +134,7 @@ $result =  $orderStatusUpdate->orderUpdates($order_ref);
 return $result;
 ```
 
-You will then receive all order related information.
-```
-array (
-    'merchant_order_id' => 'test-order',
-    'order_ref' => 'bsecure-reference',
-    'order_type' => 'App/Manual',
-    'placement_status' => '3',
-    'payment_status' => '0',
-    'customer' => 
-    array (
-      'name' => 'xxx',
-      'email' => 'xxx',
-      'country_code' => xx,
-      'phone_number' => 'xxx',
-      'gender' => NULL,
-      'dob' => NULL,
-    ),
-    'payment_method' => 
-    array (
-      'id' => 1,
-      'name' => 'Cash on Delivery',
-    ),
-    'card_details' => NULL,
-    'delivery_address' => 
-    array (
-      'name' => NULL,
-      'country' => 'Pakistan',
-      'province' => 'Sindh',
-      'city' => 'Karachi',
-      'area' => 'PECHS',
-      'address' => 'Dilkusha Forum, 7 Tariq Rd, Delhi Society Delhi CHS PECHS, Karachi, Karachi City, Sindh, Pakistan',
-      'lat' => '24.8784263',
-      'long' => '67.0641403',
-    ),
-    'shipment_method' => 
-    array (
-      'id' => 1,
-      'name' => 'Free Shipping',
-      'description' => 'my shipment',
-      'cost' => 100,
-    ),
-    'items' => 
-    array (
-      0 => 
-      array (
-        'product_id' => '1',
-        'product_name' => 'BAZIC Asst. Size Paint Brush Set (15/Pack)',
-        'product_sku' => 'abc-123',
-        'product_qty' => 1,
-      )
-    ),
-    'created_at' => '2020-11-26 15:00:34',
-    'time_zone' => 'Asia/Karachi',
-    'summary' => 
-    array (
-      'total_amount' => 278.5,
-      'sub_total_amount' => 248.5,
-      'discount_amount' => 70,
-      'shipment_cost' => 100,
-    ),
-  ),
-```
-
-#### Order Updates
+#### Update Manual Order Status
 To update order status for manually created orders, you need to pass order_ref and status in updateManualOrderStatus() 
 
 ```
@@ -208,18 +158,20 @@ return [
   'environment' => env('BSECURE_ENVIRONMENT'),
 ];
 ```
-####Routing
+###Routing
 Next, you are ready to authenticate users! You will need two routes: one for redirecting the user to the OAuth provider, and another for receiving the customer profile from the provider after authentication. We will access BsecureSSO using the BsecureSSO Facade:
 
 You will need to define routes to your controller methods
 
 ```
-Route::post('/login/bSecure', 'TestController@redirectToProvider');
-Route::post('/login/bSecure/callback', 'TestController@handleProviderCallback');
+Route::post('/sso-login', 'TestController@ssoWebLogin');
+Route::post('/sso-sdk-login', 'TestController@ssoSDKLogin');
+Route::post('/sso-verify-customer', 'TestController@verifyCustomer');
 ```
 
-```
+####Authenticate Client
 
+```
 <?php
 
 namespace App\Http\Controllers;
@@ -236,28 +188,52 @@ class TestController extends Controller
      * @return \Illuminate\Http\Response
      */
      
-    public function redirectToProvider(Request $request)
+    public function ssoWebLogin(Request $request)
     {
         $requestData = $request->all();
-        $client = new BsecureSSO();
-        $redirect = $client->authenticateClient($requestData);
-        return $redirect;
-    }
+        $state = $requestData['state'];
 
+        $client = new BsecureSSO();
+        return $client->authenticateWebClient($state);
+    }
+    
+    /**
+     * Provide payload for sdk authentication layer.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function ssoSDKLogin(Request $request)
+    {
+        $requestData = $request->all();
+
+        $state = $requestData['state'];
+
+        $client = new BsecureSSO();
+        return $client->authenticateSDKClient($state);
+    }
 }
 
 ```
 
-In response, it will return request_id, merchant_name, store_url.
+In response, ssoWebLogin will return redirect_url, then simply redirect the user to redirect_url
 ```
 array (
-  'request_id' => 'request-id',
-  'merchant_name' => 'your-public-company-name',
-  'store_url' => 'your-public-company-name',
+  "redirect_url": "your-authentication-url"
+
 )
 ```
-Pass this request_id, merchant_name, store_url to your SDK.
- 
+
+In response, ssoSDKLogin will return request_id, merchant_name and store_url
+```
+array (
+  "request_id": "your-request-identifier",
+  "merchant_name": "builder-company-name",
+  "store_url": "builder-store-url"
+)
+```
+####Get Customer Information
+
 ```
 
 <?php
