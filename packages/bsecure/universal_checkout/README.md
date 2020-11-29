@@ -168,7 +168,7 @@ Route::post('/sso-sdk-login', 'TestController@ssoSDKLogin');
 Route::post('/sso-verify-customer', 'TestController@verifyCustomer');
 ```
 
-####Authenticate Client
+###Authenticate Client
 
 ```
 <?php
@@ -231,7 +231,7 @@ array (
   "store_url": "builder-store-url"
 )
 ```
-####Get Customer Information
+###Get Customer Information
 
 ```
 
