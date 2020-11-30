@@ -1,9 +1,9 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Models;
+namespace bSecure\UniversalCheckout\Models;
 
-use bSecure\UniveralCheckout\Models\Merchant;
-use bSecure\UniveralCheckout\Helpers\Helper;
+use bSecure\UniversalCheckout\Models\Merchant;
+use bSecure\UniversalCheckout\Helpers\Helper;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model

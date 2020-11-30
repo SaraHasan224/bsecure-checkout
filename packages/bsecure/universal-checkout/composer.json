@@ -1,0 +1,47 @@
+{
+    "name": "bsecure/universal-checkout",
+    "description": "Pakistan's first universal checkout solution for ecommerce stores built on woocommerce, magento, shopify and more",
+    "keywords": [
+        "bsecure",
+        "universal-checkout"
+    ],
+    "homepage": "https://github.com/bsecure/universal-checkout",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sara Hasan",
+            "email": "tech@bsecure.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5|^8.0",
+        "illuminate/support": "^6.0",
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "bSecure\\UniversalCheckout\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "bSecure\\UniversalCheckout\\CheckoutServiceProvider",
+                "bSecure\\UniversalCheckout\\SSOServiceProvider"
+            ],
+            "aliases": {
+                "BsecureCheckout": "bSecure\\UniversalCheckout\\CheckoutFacade",
+                "BsecureSSO": "bSecure\\UniversalCheckout\\SSOFacade"
+            }
+        }
+    }
+}

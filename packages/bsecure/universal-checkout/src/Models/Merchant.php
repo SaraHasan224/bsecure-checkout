@@ -1,8 +1,8 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Models;
+namespace bSecure\UniversalCheckout\Models;
 
-use bSecure\UniveralCheckout\Helpers\Helper;
+use bSecure\UniversalCheckout\Helpers\Helper;
 use Illuminate\Database\Eloquent\Model;
 
 class Merchant extends Model

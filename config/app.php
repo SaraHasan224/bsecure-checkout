@@ -165,8 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-        bSecure\UniveralCheckout\CreateOrderServiceProvider::class,
-        bSecure\UniveralCheckout\SSOServiceProvider::class,
+        bSecure\UniversalCheckout\CheckoutServiceProvider::class,
+        bSecure\UniversalCheckout\SSOServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,8 +228,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'BsecureSSO' => bSecure\UniveralCheckout\BsecureSSO::class,
-        'BsecureCheckout' => bSecure\UniveralCheckout\BsecureCheckout::class,
+        'BsecureSSO' => bSecure\UniversalCheckout\BsecureSSO::class,
+        'BsecureCheckout' => bSecure\UniversalCheckout\BsecureCheckout::class,
     ],
 
 ];

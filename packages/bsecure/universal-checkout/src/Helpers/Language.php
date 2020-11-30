@@ -1,6 +1,6 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Helpers;
+namespace bSecure\UniversalCheckout\Helpers;
 
 class Language
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace bSecure\UniveralCheckout;
+namespace bSecure\UniversalCheckout;
 
-use bSecure\UniveralCheckout\Controllers\Orders\CreateOrderController;
-use bSecure\UniveralCheckout\Controllers\Orders\IOPNController;
-use bSecure\UniveralCheckout\Controllers\Orders\OrderStatusUpdateController;
+use bSecure\UniversalCheckout\Controllers\Orders\CreateOrderController;
+use bSecure\UniversalCheckout\Controllers\Orders\IOPNController;
+use bSecure\UniversalCheckout\Controllers\Orders\OrderStatusUpdateController;
 
-use bSecure\UniveralCheckout\Helpers\ApiResponseHandler;
+use bSecure\UniversalCheckout\Helpers\ApiResponseHandler;
 use Illuminate\Support\Facades\Facade;
 
 class BsecureCheckout extends Facade

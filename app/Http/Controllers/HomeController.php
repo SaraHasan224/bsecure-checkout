@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-//use bSecure\UniveralCheckout\Controllers\Orders\CreateOrderController;
+//use bSecure\UniversalCheckout\Controllers\Orders\CreateOrderController;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

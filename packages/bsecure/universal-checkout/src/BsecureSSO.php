@@ -1,11 +1,11 @@
 <?php
 
-namespace bSecure\UniveralCheckout;
+namespace bSecure\UniversalCheckout;
 
-use bSecure\UniveralCheckout\Controllers\SSO\CustomerVerification;
-use bSecure\UniveralCheckout\Controllers\SSO\VerifyClientController;
+use bSecure\UniversalCheckout\Controllers\SSO\CustomerVerification;
+use bSecure\UniversalCheckout\Controllers\SSO\VerifyClientController;
 
-use bSecure\UniveralCheckout\Helpers\Constant;
+use bSecure\UniversalCheckout\Helpers\Constant;
 use Illuminate\Support\Facades\Facade;
 
 class BsecureSSO extends Facade

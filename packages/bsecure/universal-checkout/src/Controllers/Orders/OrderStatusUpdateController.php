@@ -1,17 +1,17 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Controllers\Orders;
+namespace bSecure\UniversalCheckout\Controllers\Orders;
 
 use App\Http\Controllers\Controller;
 
 
 //Models
-use bSecure\UniveralCheckout\Helpers\Constant;
-use bSecure\UniveralCheckout\Models\Order;
+use bSecure\UniversalCheckout\Helpers\Constant;
+use bSecure\UniversalCheckout\Models\Order;
 
 //Helper
-use bSecure\UniveralCheckout\Helpers\AppException;
-use bSecure\UniveralCheckout\Helpers\ApiResponseHandler;
+use bSecure\UniversalCheckout\Helpers\AppException;
+use bSecure\UniversalCheckout\Helpers\ApiResponseHandler;
 
 //Facade
 use Validator;

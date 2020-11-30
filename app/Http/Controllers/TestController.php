@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use bSecure\UniveralCheckout\BsecureCheckout;
-use bSecure\UniveralCheckout\BsecureSSO;
+use bSecure\UniversalCheckout\BsecureCheckout;
+use bSecure\UniversalCheckout\BsecureSSO;
 
 use Illuminate\Http\Request;
 

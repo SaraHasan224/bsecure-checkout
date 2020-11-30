@@ -1,6 +1,6 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Models;
+namespace bSecure\UniversalCheckout\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace bSecure\UniveralCheckout;
+namespace bSecure\UniversalCheckout;
 
 use Illuminate\Support\ServiceProvider;
 
-class CreateOrderServiceProvider extends ServiceProvider
+class CheckoutServiceProvider extends ServiceProvider
 {
     /**
      * Register services.

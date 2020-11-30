@@ -3,8 +3,12 @@
 </p>
 
 
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/bsecure/universal-checkout.svg?style=flat-square)](https://packagist.org/packages/bsecure/universal-checkout)
 [![Latest Stable Version](https://poser.pugx.org/bsecure/universal-checkout/v)](//packagist.org/packages/bsecure/universal-checkout) 
-[![Total Downloads](https://poser.pugx.org/bsecure/universal-checkout/downloads)](//packagist.org/packages/bsecure/universal-checkout) 
+[![Build Status](https://img.shields.io/travis/bsecure/universal-checkout/master.svg?style=flat-square)](https://travis-ci.org/bsecure/universal-checkout)
+[![Quality Score](https://img.shields.io/scrutinizer/g/bsecure/universal-checkout.svg?style=flat-square)](https://scrutinizer-ci.com/g/bsecure/universal-checkout)
+[![Total Downloads](https://img.shields.io/packagist/dt/bsecure/universal-checkout.svg?style=flat-square)](https://packagist.org/packages/bsecure/universal-checkout)
 [![Latest Unstable Version](https://poser.pugx.org/bsecure/universal-checkout/v/unstable)](//packagist.org/packages/bsecure/universal-checkout) 
 [![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
 [![Version](https://poser.pugx.org/bsecure/universal-checkout/version)](//packagist.org/packages/bsecure/universal-checkout)
@@ -17,34 +21,34 @@ bSecure Checkout
 bSecure is a one-click checkout solution for selling your products all across the globe instantly. We bring everything together that’s required to manage and streamline your product checkout for an instant buying experience. A security-centric approach with every transaction encrypted and never compromising on transparency of user needs and expectations.
 
 ## Installation
-bSecure univeral checkout and SSO Integration
+You can install the package via composer
 
-``composer require bSecure/univeral-checkout``
+``composer require bSecure/universal-checkout``
 
 Add provider for bSecure checkout and single-sign-on in app.php
 
-`` bSecure\UniveralCheckout\CreateOrderServiceProvider::class ``
+`` bSecure\UniversalCheckout\CheckoutServiceProvider::class ``
 
-`` bSecure\UniveralCheckout\SSOServiceProvider::class ``
+`` bSecure\UniversalCheckout\SSOServiceProvider::class ``
 
 Add alias
 
-`` 'BsecureCheckout' => bSecure\UniveralCheckout\BsecureCheckout::class ``
+`` 'BsecureCheckout' => bSecure\UniversalCheckout\BsecureCheckout::class ``
 
-`` 'BsecureSSO' => bSecure\UniveralCheckout\BsecureSSO::class ``
+`` 'BsecureSSO' => bSecure\UniversalCheckout\BsecureSSO::class ``
 
 
 ### Publish the language file.
-  ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\CreateOrderServiceProvider"``
+  ``php artisan vendor:publish --provider="bSecure\UniversalCheckout\CheckoutServiceProvider"``
   
-   ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\SSOServiceProvider"``
+   ``php artisan vendor:publish --provider="bSecure\UniversalCheckout\SSOServiceProvider"``
 
 It will create a vendor/bSecure folder inside resources/lang folder. If you want to customize the error messages your can overwrite the file.
 
 ### Publish the configuration file
-  ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\CreateOrderServiceProvider" --tag="config""``
+  ``php artisan vendor:publish --provider="bSecure\UniversalCheckout\CheckoutServiceProvider" --tag="config""``
 
-  ``php artisan vendor:publish --provider="bSecure\UniveralCheckout\SSOServiceProvider" --tag="config""``
+  ``php artisan vendor:publish --provider="bSecure\UniversalCheckout\SSOServiceProvider" --tag="config""``
 
 A file (bSecure.php) will be placed in config folder.
 
@@ -65,7 +69,7 @@ return [
 To create an order, you need to pass order_id and products in createOrder() 
 
 ```
-use bSecure\UniveralCheckout\BsecureCheckout;
+use bSecure\UniversalCheckout\BsecureCheckout;
 
 $order = new BsecureCheckout();
 $result =  $order->createOrder($orderPayload);
@@ -126,7 +130,7 @@ When order is created successfully on bSecure, you will be redirected to bSecure
 To receive order updates, you need to pass order_ref in orderUpdates() 
 
 ```
-use bSecure\UniveralCheckout\BsecureCheckout;
+use bSecure\UniversalCheckout\BsecureCheckout;
 
 $order_ref = $order->order_ref;
 
@@ -139,7 +143,7 @@ return $result;
 To update order status for manually created orders, you need to pass order_ref and status in updateManualOrderStatus() 
 
 ```
-use bSecure\UniveralCheckout\BsecureCheckout;
+use bSecure\UniversalCheckout\BsecureCheckout;
 
 $order = new BsecureCheckout();
 $result =  $order->updateManualOrderStatus($order_ref,$orderStatus);
@@ -180,7 +184,7 @@ Client Authentication is of two type sdk and web client validation.
 
 namespace App\Http\Controllers;
 
-use bSecure\UniveralCheckout\BsecureSSO;
+use bSecure\UniversalCheckout\BsecureSSO;
 
 use Illuminate\Http\Request;
 
@@ -246,7 +250,7 @@ After successful login to sso app below method will let you get customer profile
 
 namespace App\Http\Controllers;
 
-use bSecure\UniveralCheckout\BsecureSSO;
+use bSecure\UniversalCheckout\BsecureSSO;
 
 use Illuminate\Http\Request;
 
@@ -289,3 +293,11 @@ array (
         ),
 )
 ```
+
+### Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

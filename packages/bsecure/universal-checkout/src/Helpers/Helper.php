@@ -1,9 +1,9 @@
 <?php
 
 
-namespace bSecure\UniveralCheckout\Helpers;
+namespace bSecure\UniversalCheckout\Helpers;
 
-use bSecure\UniveralCheckout\Models\Merchant;
+use bSecure\UniversalCheckout\Models\Merchant;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;

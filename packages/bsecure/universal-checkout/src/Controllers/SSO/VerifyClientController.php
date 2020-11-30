@@ -1,15 +1,15 @@
 <?php
 
-namespace bSecure\UniveralCheckout\Controllers\SSO;
+namespace bSecure\UniversalCheckout\Controllers\SSO;
 
 use App\Http\Controllers\Controller;
 
 
 //Helper
-use bSecure\UniveralCheckout\Helpers\AppException;
-use bSecure\UniveralCheckout\Helpers\Constant;
-use bSecure\UniveralCheckout\Helpers\ApiResponseHandler;
-use bSecure\UniveralCheckout\Helpers\Helper;
+use bSecure\UniversalCheckout\Helpers\AppException;
+use bSecure\UniversalCheckout\Helpers\Constant;
+use bSecure\UniversalCheckout\Helpers\ApiResponseHandler;
+use bSecure\UniversalCheckout\Helpers\Helper;
 
 //Facade
 use Validator;
