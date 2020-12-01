@@ -6,49 +6,97 @@ use bSecure\UniversalCheckout\Controllers\Orders\CreateOrderController;
 use bSecure\UniversalCheckout\Controllers\Orders\IOPNController;
 use bSecure\UniversalCheckout\Controllers\Orders\OrderStatusUpdateController;
 
-use bSecure\UniversalCheckout\Helpers\ApiResponseHandler;
 use Illuminate\Support\Facades\Facade;
 
 class BsecureCheckout extends Facade
 {
+
+    private $orderPayload = [
+      'order_id' => null,
+      'customer' => null,
+      'products' => null,
+      'sub_total_amount' => null,
+      'discount_amount' => null,
+      'total_amount' => null
+    ];
+
     /*
-     *  CREATE ORDER: Create Order using Merchant Access Token from Merchant backend server
+     *  CREATE ORDER: Set Order Id
     */
-    public function createOrder($requestData)
+    public function setOrderId($orderId)
     {
         try {
-            $order = new CreateOrderController();
-            return $order->create($requestData);
+            $this->orderPayload['order_id'] = $orderId;
+            return $this->orderPayload;
             //code...
         } catch (\Throwable $th) {
             throw $th;
         }
+    }
 
+
+    /*
+     *  CREATE ORDER: Set Customer Payload
+    */
+    public function setCustomer($customerData)
+    {
+        try {
+            $order = new CreateOrderController();
+            $customer = $order->_setCustomer($customerData);
+            $this->orderPayload['customer'] = $customer;
+            return $this->orderPayload;
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    /*
+     *  CREATE ORDER: Set Products Data
+    */
+
+    public function
+    setCartItems($productsData)
+    {
+        try {
+            $order = new CreateOrderController();
+            $orderItems = $order->_setProductsDataStructure($productsData);
+
+            $this->orderPayload['products'] = $orderItems['products'];
+            $this->orderPayload['sub_total_amount'] = $orderItems['sub_total_amount'];
+            $this->orderPayload['discount_amount'] = $orderItems['discount_amount'];
+            $this->orderPayload['total_amount'] = $orderItems['total_amount'];
+
+            return $this->orderPayload;
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    /*
+     *  CREATE ORDER: Create Order using Merchant Access Token from Merchant backend server
+    */
+    public function createOrder()
+    {
+        try {
+            $order = new CreateOrderController();
+            return $order->create($this->orderPayload);
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /*
      *  INSTANT ORDER PROCESSING NOTIFICATIONS : Get order status for merchant
     */
 
-    public function orderUpdates($order_ref = null)
+    public function orderStatusUpdates($order_ref = null)
     {
         try {
             $customer = new IOPNController();
             return $customer->orderStatus($order_ref);
-            //code...
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-    }
-
-    /*
-     *  MANUAL ORDERS STATUS UPDATE: Update order status for merchant's manual orders
-    */
-    public function updateManualOrderStatus($order_ref = null,$orderStatus = null)
-    {
-        try {
-            $order = new OrderStatusUpdateController();
-            return $order->updateStatus($order_ref,$orderStatus);
             //code...
         } catch (\Throwable $th) {
             throw $th;

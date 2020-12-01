@@ -15,19 +15,20 @@ class TestController extends Controller
     public function createOrder(Request $request)
     {
         $requestData = $request->all();
-        $order = new BsecureCheckout();
-        return $order->createOrder($requestData);
-    }
 
-    public function manualOrderStatusUpdate(Request $request)
-    {
-        $requestData = $request->all();
-        $order_ref = $requestData['order_ref'];
-        $orderStatus = $requestData['status'];
+        $orderId = array_key_exists('order_id',$requestData) ? $requestData['order_id'] : null;
+        $products = array_key_exists('products',$requestData) ? $requestData['products'] : null;
+        $customer = array_key_exists('customer',$requestData) ? $requestData['customer'] : null;
 
         $order = new BsecureCheckout();
-        return $order->updateManualOrderStatus($order_ref,$orderStatus);
+
+        $order->setOrderId($orderId);
+        $order->setCustomer($customer);
+        $order->setCartItems($products);
+
+        return $order->createOrder();
     }
+
 
     public function orderStatus(Request $request)
     {
@@ -36,7 +37,7 @@ class TestController extends Controller
         $order_ref = $requestData['order_ref'];
 
         $order = new BsecureCheckout();
-        return $order->orderUpdates($order_ref);
+        return $order->orderStatusUpdates($order_ref);
     }
 
     /*
@@ -70,5 +71,8 @@ class TestController extends Controller
         $client = new BsecureSSO();
         return $client->customerProfile($auth_code);
     }
+
+    //Receive authcode after successfull login
+
 
 }

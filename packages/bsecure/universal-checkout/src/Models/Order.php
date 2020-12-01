@@ -30,6 +30,25 @@ class Order extends Model
         'products.*.description'       => 'nullable|string',
         'products.*.short_description' => 'nullable|string|max:1000',
       ],
+      'order-id' =>   'required',
+      'order-products-data'  => [
+        '*.id'                => 'required|string|min:1|max:100|not_in:0',
+        '*.name'              => 'required|string|min:1|max:100',
+        '*.sku'               => 'nullable|string|max:25',
+        '*.quantity'          => 'required|integer|max:999',
+        '*.price'             => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/|not_in:0',
+        '*.sale_price'        => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/',
+        '*.image'             => 'required|url',
+        '*.description'       => 'nullable|string',
+        '*.short_description' => 'nullable|string|max:1000',
+      ],
+      'order-customer-data'  => [
+        'name'         => 'nullable|string|max:191',
+        'country_code' => 'nullable|string|min:2|max:3',
+        'phone_number' => 'nullable|string|min:10|max:10',
+        'email'        => 'nullable|email',
+        'auth_code'    => 'nullable|string',
+      ]
     ];
 
 

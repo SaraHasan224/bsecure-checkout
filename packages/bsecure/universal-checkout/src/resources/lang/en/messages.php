@@ -31,6 +31,18 @@ return [
     'state' => [
       'required' => 'State field is required',
     ],
+    'order_id' => [
+      'required' => 'Order id field is required',
+      'failure' =>   'Unable to set order id field. Try again later',
+    ],
+    'customer' => [
+      'required' => 'Customer object is required',
+      'failure' =>   'Unable to set customer object field. Try again later',
+    ],
+    'products' => [
+      'required' => 'Products object is required',
+      'failure' =>   'Unable to set products object field. Try again later',
+    ],
     'order_status' => [
       'required' => 'Order status field is required',
       'not_matched' => 'Order status does not match with bSecure order statuses.',

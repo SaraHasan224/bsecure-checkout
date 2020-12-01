@@ -50,7 +50,7 @@ class VerifyClientController extends Controller
                 {
                     return ApiResponseHandler::failure($ssoResponse['message']);
                 }else{
-                    $response = $ssoPayload;
+                    $response = $ssoResponse['body'];
                     return ApiResponseHandler::success($response, trans('bSecure::messages.sso_sco.success'));
                 }
             }else{

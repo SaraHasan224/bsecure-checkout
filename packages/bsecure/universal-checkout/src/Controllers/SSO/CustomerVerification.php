@@ -76,4 +76,5 @@ class CustomerVerification extends Controller
 
         return $sso_client;
     }
+
 }

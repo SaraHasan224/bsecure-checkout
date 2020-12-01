@@ -11,23 +11,34 @@
     "authors": [
         {
             "name": "Sara Hasan",
-            "email": "tech@bsecure.com",
+            "email": "sara.hasan@nextgeni.net",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.2.5|^8.0",
-        "illuminate/support": "^6.0",
-        "guzzlehttp/guzzle": "^7.2"
+        "illuminate/support": "^6.0"
     },
     "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.5",
         "guzzlehttp/guzzle": "^7.2"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
+            "bSecure\\UniversalCheckout\\Tests\\": "tests",
             "bSecure\\UniversalCheckout\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "bSecure\\UniversalCheckout\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true
