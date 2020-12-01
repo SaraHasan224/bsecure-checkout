@@ -5,8 +5,8 @@ Pakistan's first universal checkout solution that is easy and simple to integrat
 
 ### About bSecure Checkout ##
 
-It gives you an option to enable*universal-login*,*two-click checkout*and accept multiple payment method for your customers, as well as run your e-commerce store hassle free.\
-It is built for*desktop*,*tablet*, and*mobile devices* and is continuously tested and updated to offer a frictionless payment experience for your e-commerce store.
+It gives you an option to enable *universal-login*, *two-click checkout* and accept multiple payment method for your customers, as well as run your e-commerce store hassle free.\
+It is built for *desktop*, *tablet*, and *mobile devices* and is continuously tested and updated to offer a frictionless payment experience for your e-commerce store.
 
 
 ### Installation
@@ -78,7 +78,7 @@ return [
 To create an order you should have an order_id, customer and products object parameters that are to be set before creating an order.
 ##### Create Order Request Params:
 
-Product Object:
+###### Product Object:
 
 Products object should be in below mentioned format:
 ```
@@ -103,8 +103,9 @@ Products object should be in below mentioned format:
 Customer object should be in below mentioned format:
 
 >1- If the customer has already signed-in via bSecure into your system and you have auth-code for the customer you can
-just pass that code in the customer object no need for the rest of the fields.\
-2- Since all the fields in Customer object are optional, if you don’t have any information about customer just pass the
+just pass that code in the customer object no need for the rest of the fields.
+
+>2- Since all the fields in Customer object are optional, if you don’t have any information about customer just pass the
 empty object, or if you have customer details then your customer object should be in below mentioned format:
 ```
 'customer' => 
@@ -160,7 +161,7 @@ redirect url” in your [environment settings](https://partner.bsecure.pk/) in P
 string.
 
 #### Order Updates
-By using order_ref you received in the **"Callback on Order Placement"** you can call below method to get order details.
+By using order_ref you received in the **["Callback on Order Placement"](https://github.com/SaraHasan224/bsecure-checkout/tree/master#callback-on-order-placement)** you can call below method to get order details.
 
 ```
 use bSecure\UniversalCheckout\BsecureCheckout;
@@ -176,8 +177,8 @@ return $result;
 
 #### Order Status Change Webhook
 Whenever there is any change in order status or payment status, bSecure will send you an update with complete
-order details (contents will be the same as response of Order Updates) on the URL you mentioned in “Checkout order status
-webhook” in your environment settings in Partners Portal. (your webhook must be able to accept POST request)
+order details (contents will be the same as response of *[Order Updates(https://github.com/SaraHasan224/bsecure-checkout/tree/master#order-updates)]*) on the URL you mentioned in *Checkout Order Status webhook* in your environment settings in Partners Portal. (your webhook must be able to accept POST request).\
+
 
 ## bSecure Single Sign On (SSO)
 
@@ -251,7 +252,7 @@ return $client->authenticateSDKClient($state);
 
 ```
 
-In response, authenticateSDKClient will return request_id, merchant_name and store_url
+In response, authenticateSDKClient will return request_id, merchant_name and store_url which you have to pass it to your SDK.
 ```
 array (
   "request_id": "your-request-identifier",
@@ -263,10 +264,11 @@ array (
 ### Client Authorization
 On Successful Authorization,\
 bSecure will redirect to Login redirect url you provided when setting up environment in Partners portal, along
-with two parameters in query string: code and state
+with two parameters in query string: **code** and **state**
 ```
 eg: https://my-store.com/sso-callback?code=abc&state=xyz
 ```
+code recieved in above callback is cutsomer's auth_code which will be further used to get customer profile.
 
 #### Verify Callback
 Verify the state you received in the callback by matching it to the value you stored in DB before sending the client authentication
