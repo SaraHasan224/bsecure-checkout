@@ -15,9 +15,11 @@ You can install the package via **composer**
 ``composer require bSecure/universal-checkout``
 
 ####Prerequisites 
+
 >PHP 7.2.5 and above
 
 ####Dependencies 
+
 >"guzzlehttp/guzzle": "^7.2"
 
 ##Usage
@@ -27,6 +29,7 @@ You can install the package via **composer**
 By following a few simple steps, you can set up your **bSecure Checkout** and **Single-Sign-On**. 
 
 ####Getting Your Credentials
+
 1. Go to [Partners Portal](https://partner.bsecure.pk/)
 2. [App Integration](https://partner.bsecure.pk/integration-sandbox) >> Sandbox / Live
 3. Select Environment Type (Custom Integration)
@@ -68,6 +71,7 @@ return [
   'environment' => env('BSECURE_ENVIRONMENT'),
 ];
 ```
+
 ###Examples
 
 #### Create Order
@@ -94,7 +98,9 @@ Products object should be in below mentioned format:
             ),
       ),
 ```
-######Customer Object: 
+######Customer Object
+######Customer Object
+
 Customer object should be in below mentioned format:
 
 >1- If the customer has already signed-in via bSecure into your system and you have auth-code for the customer you can
@@ -262,6 +268,7 @@ with two parameters in query string: code and state
 ```
 eg: https://my-store.com/sso-callback?code=abc&state=xyz
 ```
+
 ####Verify Callback
 Verify the state you received in the callback by matching it to the value you stored in DB before sending the client authentication
 request, you should only proceed if and only if both values match.
