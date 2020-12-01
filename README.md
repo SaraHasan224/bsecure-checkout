@@ -316,4 +316,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Contributions
 
-“bSecure – Your Universal Checkout” is open source software. The following people have contributed to this plugin.
+**"bSecure – Your Universal Checkout"** is open source software.
