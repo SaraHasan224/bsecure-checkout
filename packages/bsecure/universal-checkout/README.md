@@ -1,3 +1,18 @@
+<p align="center">
+  <img src="https://bsecure-dev.s3-eu-west-1.amazonaws.com/dev/react_app/assets/secure_logo.png" width="400px" position="center">
+</p>
+
+
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/bsecure/universal-checkout.svg?style=flat-square)](https://packagist.org/packages/bsecure/universal-checkout)
+[![Latest Stable Version](https://poser.pugx.org/bsecure/universal-checkout/v)](//packagist.org/packages/bsecure/universal-checkout) 
+[![Build Status](https://img.shields.io/travis/bsecure/universal-checkout/master.svg?style=flat-square)](https://travis-ci.org/bsecure/universal-checkout)
+[![Quality Score](https://img.shields.io/scrutinizer/g/bsecure/universal-checkout.svg?style=flat-square)](https://scrutinizer-ci.com/g/bsecure/universal-checkout)
+[![Total Downloads](https://img.shields.io/packagist/dt/bsecure/universal-checkout.svg?style=flat-square)](https://packagist.org/packages/bsecure/universal-checkout)
+[![Latest Unstable Version](https://poser.pugx.org/bsecure/universal-checkout/v/unstable)](//packagist.org/packages/bsecure/universal-checkout) 
+[![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
+[![Version](https://poser.pugx.org/bsecure/universal-checkout/version)](//packagist.org/packages/bsecure/universal-checkout)
+
 
 bSecure Checkout 
 =========================
