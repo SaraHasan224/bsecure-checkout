@@ -15,10 +15,13 @@ class BsecureCheckout extends Facade
       'order_id' => null,
       'customer' => null,
       'products' => null,
+      'shipment_charges' => null,
+      'shipment_method_name' => null,
       'sub_total_amount' => null,
       'discount_amount' => null,
       'total_amount' => null
     ];
+
 
     /*
      *  CREATE ORDER: Set Order Id
@@ -52,11 +55,27 @@ class BsecureCheckout extends Facade
     }
 
     /*
+     *  CREATE ORDER: Set Shipment Details
+    */
+    public function setShipmentDetails($shipmentData)
+    {
+        try {
+            $order = new CreateOrderController();
+            $shipment = $order->_setShipmentDetails($shipmentData);
+            $this->orderPayload['shipment_charges'] = $shipment['charges'];
+            $this->orderPayload['shipment_method_name'] = $shipment['method_name'];
+            return $this->orderPayload;
+            //code...
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    /*
      *  CREATE ORDER: Set Products Data
     */
 
-    public function
-    setCartItems($productsData)
+    public function setCartItems($productsData)
     {
         try {
             $order = new CreateOrderController();

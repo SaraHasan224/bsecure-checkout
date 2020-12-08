@@ -40,6 +40,7 @@ class CreateOrderController extends Controller
             }
 
             $orderResponse = Order::createMerchantOrder($orderData);
+            print_r(json_encode($orderResponse));die();
 
             if($orderResponse['error'])
             {
@@ -50,6 +51,7 @@ class CreateOrderController extends Controller
                 return ApiResponseHandler::success($response, trans('bSecure::messages.order.success'));
             }
         } catch (\Exception $e) {
+            print_r($e);
             return ApiResponseHandler::failure(trans('bSecure::messages.order.failure'), $e->getTraceAsString());
         }
     }
@@ -73,12 +75,22 @@ class CreateOrderController extends Controller
             $orderItems['products'] = [];
 
             foreach ($products as $key => $product) {
-                $price = $product['price'];
+                //Product Price
+                $price = $product['price'] ;
                 $sale_price = $product['sale_price'];
                 $quantity = $product['quantity'] ?? 1;
-                $discount = ($price - $sale_price) * $quantity;
-                $sub_total_with_discount = ($sale_price * $quantity);
-                $sub_total_without_discount = ($price * $quantity);
+
+                //Product options
+                $product_options = $this->_setProductOptionsDataStructure($product);
+
+                $options_price = $product_options['price'];
+                $options = $product_options['options'];
+
+
+                #Product charges
+                $discount = ( $price - $sale_price ) * $quantity;
+                $product_price = ( $price + $options_price ) * $quantity;
+                $product_sub_total = ( $price + $options_price ) * $quantity;
 
                 $orderItems['products'][] = [
                   "id" => $product['id'],
@@ -86,15 +98,17 @@ class CreateOrderController extends Controller
                   "sku" => $product['sku'],
                   "quantity" => $quantity,
                   "price" => $price,
-                  "discount" => $discount,
                   "sale_price" => $sale_price,
-                  "sub_total" => $sub_total_with_discount,
+                  "discount" => $discount,
+                  "sub_total" => $product_price,
                   "image" => $product['image'],
                   "short_description" => $product['short_description'],
                   "description" => $product['description'],
+                  "product_options" => $options
                 ];
+
                 $total_discount += $discount;
-                $sub_total_amount += $sub_total_without_discount;
+                $sub_total_amount += $product_sub_total;
             }
 
             $order_grand_total = $sub_total_amount-$total_discount;
@@ -105,6 +119,35 @@ class CreateOrderController extends Controller
             $orderData['total_amount'] = $order_grand_total;
         }
         return $orderData;
+    }
+
+
+    public function _setProductOptionsDataStructure($product)
+    {
+        $product_options = array_key_exists('product_options',$product) ? $product['product_options'] : [];
+
+        $price = 0;
+        if( isset($product_options) && !empty($product_options) )
+        {
+            foreach( $product_options as $productOption )
+            {
+                $productValue = array_key_exists('value',$productOption) ? $productOption['value'] : [];
+                foreach( $productValue as $key => $optionValue )
+                {
+                    $optionPrice = array_key_exists('price',$optionValue) ? $optionValue['price'] : [];
+                    if(!empty($optionPrice))
+                    {
+                        #Price ++
+                        $price += $optionPrice;
+                    }
+                }
+            }
+        }
+
+        return [
+          'price' => $price,
+          'options'  => $product_options
+        ];
     }
 
 
@@ -134,4 +177,13 @@ class CreateOrderController extends Controller
         return $customer;
     }
 
+
+
+    public function _setShipmentDetails($shipmentData)
+    {
+        return  [
+          "charges" => array_key_exists('charges',$shipmentData) ? $shipmentData['charges'] : '',
+          "method_name" => array_key_exists('method_name',$shipmentData) ? $shipmentData['method_name'] : '',
+        ];
+    }
 }

@@ -12,6 +12,9 @@ class Order extends Model
       'createOrder' => [
         'order_id'                     => 'required',
 
+        'shipment_method_name'                     => 'nullable|string',
+        'shipment_charges'                     => 'nullable|numeric',
+
         'customer'                     => 'required',
         'customer.name'         => 'nullable|string|max:191',
         'customer.country_code' => 'nullable|string|min:2|max:3',
@@ -21,34 +24,16 @@ class Order extends Model
 
         'products'                     => 'required',
         'products.*.id'                => 'required|string|min:1|max:100|not_in:0',
-        'products.*.name'              => 'required|string|min:1|max:100',
-        'products.*.sku'               => 'nullable|string|max:25',
-        'products.*.quantity'          => 'required|integer|max:999',
+        'products.*.name'              => 'required|string',
+        'products.*.sku'               => 'nullable|string|max:50',
+        'products.*.quantity'          => 'required|integer|max:9999',
         'products.*.price'             => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/|not_in:0',
         'products.*.sale_price'        => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/',
         'products.*.image'             => 'required|url',
         'products.*.description'       => 'nullable|string',
-        'products.*.short_description' => 'nullable|string|max:1000',
+        'products.*.short_description' => 'nullable|string',
+        'products.*.product_options' => 'nullable',
       ],
-      'order-id' =>   'required',
-      'order-products-data'  => [
-        '*.id'                => 'required|string|min:1|max:100|not_in:0',
-        '*.name'              => 'required|string|min:1|max:100',
-        '*.sku'               => 'nullable|string|max:25',
-        '*.quantity'          => 'required|integer|max:999',
-        '*.price'             => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/|not_in:0',
-        '*.sale_price'        => 'required|numeric|regex:/^\d+(\.\d{1,4})?$/',
-        '*.image'             => 'required|url',
-        '*.description'       => 'nullable|string',
-        '*.short_description' => 'nullable|string|max:1000',
-      ],
-      'order-customer-data'  => [
-        'name'         => 'nullable|string|max:191',
-        'country_code' => 'nullable|string|min:2|max:3',
-        'phone_number' => 'nullable|string|min:10|max:10',
-        'email'        => 'nullable|email',
-        'auth_code'    => 'nullable|string',
-      ]
     ];
 
 
@@ -67,7 +52,7 @@ class Order extends Model
                 $merchantAccessToken = $merchantToken['body'];
                 // Call Create Order API
                 $order_response = Helper::createOrder($merchantAccessToken, $orderPayload);
-
+                print_r($order_response);die();
                 if ($order_response['error']) {
                     return ['error' => true, 'message' => $order_response['body']['message']];
                 } else {
@@ -75,6 +60,7 @@ class Order extends Model
                 }
             }
         } catch (\Exception $e) {
+            print_r($e);
             return ['error' => true, 'message' => trans('bSecure::messages.order.failure'), 'exception' => $e->getTraceAsString()];
         }
     }
@@ -163,7 +149,7 @@ class Order extends Model
                 }
             }
         } catch (\Exception $e) {
-            return ['error' => true, 'message' => trans('bSecure::messages.order.failure'), 'exception' => $e->getTraceAsString()];
+            return ['error' => true, 'message' => trans('bSecure::messages.order.status.failure'), 'exception' => $e->getTraceAsString()];
         }
     }
 
