@@ -181,9 +181,15 @@ class CreateOrderController extends Controller
 
     public function _setShipmentDetails($shipmentData)
     {
-        return  [
-          "charges" => array_key_exists('charges',$shipmentData) ? $shipmentData['charges'] : '',
-          "method_name" => array_key_exists('method_name',$shipmentData) ? $shipmentData['method_name'] : '',
+        $shipmentDetail = [
+          "charges" => '',
+          "method_name" => '',
         ];
+        if(!empty($shipmentData))
+        {
+            $shipmentDetail['charges'] = array_key_exists('charges',$shipmentData) ? $shipmentData['charges'] : '';
+            $shipmentDetail['method_name'] = array_key_exists('method_name',$shipmentData) ? $shipmentData['method_name'] : '';
+        }
+        return  $shipmentDetail;
     }
 }

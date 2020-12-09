@@ -13,7 +13,6 @@
 [![License](https://poser.pugx.org/bsecure/universal-checkout/license)](//packagist.org/packages/bsecure/universal-checkout)
 [![Version](https://poser.pugx.org/bsecure/universal-checkout/version)](//packagist.org/packages/bsecure/universal-checkout)
 
-
 bSecure Checkout 
 =========================
 Pakistan's first universal checkout solution that is easy and simple to integrate on your e-commerce store. 
@@ -96,6 +95,7 @@ To create an order you should have an order_id, customer and products object par
 ###### Product Object:
 
 Products object should be in below mentioned format:
+
 ```
 'products' => 
       array (
@@ -110,9 +110,42 @@ Products object should be in below mentioned format:
               'image' => 'product-image',
               'description' => 'product-description',
               'short_description' => 'product-short-description',
+              'product_options' =>  'product_options-object'
             ),
       ),
 ```
+
+###### Product Options Object:
+
+Products object should be in below mentioned format:
+```
+'product_options' =>  
+    array (
+      0 => array (
+              'id' => 'option-id(numeric)',
+              'name' => 'option-name',
+              'value' => array (
+                0 => array (
+                        'name' => 'option-value-name',
+                        'price' => 'option-value-price',
+                     ),   
+              ),
+           ),   
+    ),
+```
+###### Shipment Object
+
+Shipment object should be in below mentioned format:
+
+>1- If the merchant want his pre-specified shipment method then he should pass shipment method detail in below mentioned format:  
+```
+'shipment' => 
+      array (
+        'charges' => 'numeric',
+        'method_name' => 'string'
+      ),
+```
+
 ###### Customer Object
 
 Customer object should be in below mentioned format:
@@ -143,6 +176,7 @@ $order = new BsecureCheckout();
 $order->setOrderId($orderId);
 $order->setCustomer($customer);
 $order->setCartItems($products);
+$order->setShipmentDetails($shipment);
 
 $result =  $order->createOrder();
 return $result;
@@ -176,7 +210,7 @@ redirect url” in your [environment settings](https://partner.bsecure.pk/) in P
 string.
 
 #### Order Updates
-By using order_ref you received in the **["Callback on Order Placement"](https://github.com/SaraHasan224/bsecure-checkout/tree/master#callback-on-order-placement)** you can call below method to get order details.
+By using order_ref you received in the "**[Callback on Order Placement](https://github.com/SaraHasan224/bsecure-checkout/tree/master#callback-on-order-placement)**" you can call below method to get order details.
 
 ```
 use bSecure\UniversalCheckout\BsecureCheckout;
@@ -192,7 +226,7 @@ return $result;
 
 #### Order Status Change Webhook
 Whenever there is any change in order status or payment status, bSecure will send you an update with complete
-order details (contents will be the same as response of *[Order Updates(https://github.com/SaraHasan224/bsecure-checkout/tree/master#order-updates)]*) on the URL you mentioned in *Checkout Order Status webhook* in your environment settings in Partners Portal. (your webhook must be able to accept POST request).\
+order details (contents will be the same as response of *[Order Updates](https://github.com/SaraHasan224/bsecure-checkout/tree/master#order-updates)*) on the URL you mentioned in *Checkout Order Status webhook* in your environment settings in Partners Portal. (your webhook must be able to accept POST request).
 
 
 ## bSecure Single Sign On (SSO)
@@ -331,4 +365,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Contributions
 
-“bSecure – Your Universal Checkout” is open source software. The following people have contributed to this plugin.
+**"bSecure – Your Universal Checkout"** is open source software.

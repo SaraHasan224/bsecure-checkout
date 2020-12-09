@@ -26,7 +26,7 @@ class TestController extends Controller
         $order->setOrderId($orderId);
         $order->setCustomer($customer);
         $order->setCartItems($products);
-//        $order->setShipmentDetails($shipment);
+        $order->setShipmentDetails($shipment);
 
         return $order->createOrder();
     }

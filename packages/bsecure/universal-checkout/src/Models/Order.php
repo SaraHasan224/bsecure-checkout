@@ -32,7 +32,13 @@ class Order extends Model
         'products.*.image'             => 'required|url',
         'products.*.description'       => 'nullable|string',
         'products.*.short_description' => 'nullable|string',
+
         'products.*.product_options' => 'nullable',
+        'products.*.product_options.*.id' => 'nullable|numeric',
+        'products.*.product_options.*.name' => 'nullable|string',
+        'products.*.product_options.*.value' => 'nullable',
+        'products.*.product_options.*.value.name' => 'nullable|string',
+        'products.*.product_options.*.value.price' => 'nullable|string',
       ],
     ];
 
